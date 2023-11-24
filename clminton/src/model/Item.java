@@ -1,6 +1,7 @@
 package model;
 import java.util.Objects;
 
+//POJO (Plain Old Java Object)
 public class Item {
     private String sku;
     private String itemName;
