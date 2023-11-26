@@ -47,8 +47,7 @@ public class BookModel implements BookDAO {
             System.out.println("arrive add book" + book.getBookName() + book.getISBN());
             setup();
             connect();
-            String sqlStatement = String.format("INSERT INTO Book (ISBN, bookName, price, sku) " +
-                    "values (%s, %s, %d, %d)",
+            String sqlStatement = String.format("INSERT INTO Book (ISBN, bookName, price, sku) values (\"%s\", \"%s\", %d, %d)",
                     book.getISBN(), book.getBookName(), book.getPrice(), book.getSku());
             sm = connection.createStatement();
             sm.execute(sqlStatement);
